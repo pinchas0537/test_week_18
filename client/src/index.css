@@ -1,30 +1,7 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  /* place-items: center; */
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
 a {
   text-decoration: inherit;
@@ -37,13 +14,15 @@ a {
   margin-inline-end: 0px;
   font-weight: bold;
   unicode-bidi: isolate;
-  margin-left:1em;
+  margin-left: 1em;
   /* margin-top: 1em; */
-  
+
 }
-.search{
+
+.search {
   margin-left: 1.5em;
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -51,24 +30,117 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  /* background-color: rgb(218, 189, 44); */
   cursor: pointer;
   transition: border-color 0.25s;
+
+
 }
-.home{
+
+.home {
   width: 100vw;
 }
-input{
+
+input {
   padding-left: 10px;
   width: 80%;
   margin-left: 4em;
   height: 3em;
   border-radius: 10px;
-  padding-left:2em ;
+  padding-left: 2em;
   font-size: 16px;
 }
-input:focus{
-  border: 1px solid yellow;
+
+input:focus {
+  border: 2px solid yellow;
+  outline: none;
+
+}
+
+.class-name {
+  max-width: 72rem; 
+  margin-left: auto; 
+  margin-right: auto;
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem;
+  padding-top: 2rem; 
+  padding-bottom: 2rem; 
+}
+
+
+
+.card {
+  display: grid;
+  gap: 1.25rem; /* 20px */
+  grid-template-columns: 1fr; /* ברירת מחדל: עמודה אחת */
+}
+
+@media (min-width: 640px) {
+  .card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.cards{
+  background-color: #ffffff;
+  border-radius: 1rem; 
+  border: 1px solid #e5e7eb; 
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  overflow: hidden;
+}
+
+
+.cards:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+span {
+  margin: 5px;
+}
+
+
+#img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+#img:hover {
+  transform: scale(1.05);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+#title{
+  .element {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.125rem; 
+  line-height: 1.75rem;
+}
+
 }
 
 button:hover {
